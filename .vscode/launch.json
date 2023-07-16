@@ -15,6 +15,13 @@
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
 			],
+			"env": {
+                "comline-tool.command1_setting": "echo Hello Command1!",
+				"comline-tool.command2_setting": "echo Hello Command2!",
+				"comline-tool.command3_setting": "echo Hello Command3!",
+				"comline-tool.command4_setting": "echo Hello Command4!",
+				"comline-tool.command5_setting": "echo Hello Command5!",
+            },
 			"preLaunchTask": "${defaultBuildTask}"
 		},
 		{
@@ -25,6 +32,13 @@
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--extensionTestsPath=${workspaceFolder}/out/test/suite/index"
 			],
+			"env": {
+                "comline-tool.command1_setting": "echo Hello Command1!",
+				"comline-tool.command2_setting": "echo Hello Command2!",
+				"comline-tool.command3_setting": "echo Hello Command3!",
+				"comline-tool.command4_setting": "echo Hello Command4!",
+				"comline-tool.command5_setting": "echo Hello Command5!",
+            },
 			"outFiles": [
 				"${workspaceFolder}/out/test/**/*.js"
 			],

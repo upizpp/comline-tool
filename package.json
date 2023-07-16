@@ -1,43 +1,89 @@
 {
   "name": "comline-tool",
-  "displayName": "comline-tool",
-  "description": "Five interfaces are provided to run terminal commands for different projects.",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.79.2"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
+	"displayName": "comline-tool",
+	"description": "Five interfaces are provided to run terminal commands for different projects.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.79.2"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "comline-tool.command1",
+				"title": "Terminal Command1"
+			},
       {
-        "command": "comline-tool.helloWorld",
-        "title": "Hello World"
+				"command": "comline-tool.command2",
+				"title": "Terminal Command2"
+			},
+      {
+				"command": "comline-tool.command3",
+				"title": "Terminal Command3"
+			},
+      {
+				"command": "comline-tool.command4",
+				"title": "Terminal Command4"
+			},
+      {
+				"command": "comline-tool.command5",
+				"title": "Terminal Command5"
+			}
+		],
+    "configuration": {
+      "title": "Terminal Commands",
+      "properties": {
+        "comline-tool.command1_setting": {
+          "type": "string",
+          "default": "",
+          "description": "The command to run."
+        },
+        "comline-tool.command2_setting": {
+          "type": "string",
+          "default": "",
+          "description": "The command to run."
+        },
+        "comline-tool.command3_setting": {
+          "type": "string",
+          "default": "",
+          "description": "The command to run."
+        },
+        "comline-tool.command4_setting": {
+          "type": "string",
+          "default": "",
+          "description": "The command to run."
+        },
+        "comline-tool.command5_setting": {
+          "type": "string",
+          "default": "",
+          "description": "The command to run."
+        }
       }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.79.2",
-    "@types/glob": "^8.1.0",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "20.2.5",
-    "@typescript-eslint/eslint-plugin": "^5.59.8",
-    "@typescript-eslint/parser": "^5.59.8",
-    "eslint": "^8.41.0",
-    "glob": "^8.1.0",
-    "mocha": "^10.2.0",
-    "typescript": "^5.1.3",
-    "@vscode/test-electron": "^2.3.2"
-  }
+    }
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.79.2",
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "20.2.5",
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/parser": "^5.59.8",
+		"eslint": "^8.41.0",
+		"glob": "^8.1.0",
+		"mocha": "^10.2.0",
+		"typescript": "^5.1.3",
+		"@vscode/test-electron": "^2.3.2"
+	}
 }
