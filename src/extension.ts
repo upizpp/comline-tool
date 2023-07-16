@@ -2,8 +2,6 @@ import path = require("path");
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-	const config = vscode.workspace.getConfiguration("comline-tool");
-
 	const commandCount = 5;
 	const replaceDict : { [key: string]: () => string } = {
 		workspace() {
@@ -17,6 +15,28 @@ export function activate(context: vscode.ExtensionContext) {
 			const activeEditor = vscode.window.activeTextEditor;
 			if (activeEditor) {
 				return activeEditor.document.uri.fsPath;
+			}
+			return "";
+		},
+		filename() {
+			const activeEditor = vscode.window.activeTextEditor;
+			if (activeEditor) {
+				const path = activeEditor.document.uri.fsPath;
+				const res = path.split("/").pop();
+				if (res !== undefined){
+					return res;
+				}
+			}
+			return "";
+		},
+		filenameWOext(){
+			const activeEditor = vscode.window.activeTextEditor;
+			if (activeEditor) {
+				const path = activeEditor.document.uri.fsPath;
+				const res = path.split("/").pop()?.split(".").pop();
+				if (res !== undefined){
+					return res;
+				}
 			}
 			return "";
 		},
@@ -36,6 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
 		let disposable = vscode.commands.registerCommand(
 			`comline-tool.command${i}`,
 			() => {
+				const config = vscode.workspace.getConfiguration("comline-tool");
 				if (
 					terminal === undefined ||
 					terminal.exitStatus !== undefined

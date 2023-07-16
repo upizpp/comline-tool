@@ -19,5 +19,9 @@ The format ${something} will be replaced with the appropriate value during comma
 Denotes the current workspace path. 
 - file  
 Denotes the current file path. 
+- filename
+Denotes the current file name.
+- filenameWOext
+Denotes the current file name without extension.
 - dir  
 Denotes the current directory path.
