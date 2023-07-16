@@ -1,6 +1,12 @@
 {
   "name": "comline-tool",
 	"displayName": "comline-tool",
+	"author": {
+		"name": "upizpp",
+		"email": "upizpp123@163.com"
+	},
+	"publisher": "upizpp",
+	"icon": "icon.png",
 	"description": "Five interfaces are provided to run terminal commands for different projects.",
 	"version": "0.0.1",
 	"repository": "https://github.com/upizpp/comline-tool",
