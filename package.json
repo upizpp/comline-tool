@@ -3,6 +3,7 @@
 	"displayName": "comline-tool",
 	"description": "Five interfaces are provided to run terminal commands for different projects.",
 	"version": "0.0.1",
+	"repository": "https://github.com/upizpp/comline-tool",
 	"engines": {
 		"vscode": "^1.79.2"
 	},
